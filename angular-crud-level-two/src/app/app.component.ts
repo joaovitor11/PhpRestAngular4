@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
  
 export class AppComponent {
+    
     // properties for child components
     title="Read Products";
     product_id;
@@ -38,7 +39,43 @@ showReadProducts($event){
     this.hideAll_Html();
     this.show_read_products_html=true;
 }
+
+// show details of a product
+showReadOneProduct($event){
  
+    // set title and product ID
+    this.title=$event.title;
+    this.product_id=$event.product_id;
+ 
+    // hide all html then show only one html
+    this.hideAll_Html();
+    this.show_read_one_product_html=true;
+}
+ 
+// show the 'update product form'
+showUpdateProduct($event){
+ 
+    // set title and product ID
+    this.title=$event.title;
+    this.product_id=$event.product_id;
+ 
+    // hide all html then show only one html
+    this.hideAll_Html();
+    this.show_update_product_html=true;
+}
+
+// show 'are you sure?' prompt to confirm deletion of a record
+showDeleteProduct($event){
+ 
+    // set title and product ID
+    this.title=$event.title;
+    this.product_id=$event.product_id;
+ 
+    // hide all html then show only one html
+    this.hideAll_Html();
+    this.show_delete_product_html=true;
+}
+
 // hide all html views
 hideAll_Html(){
     this.show_read_products_html=false;
